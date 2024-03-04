@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Rock-Paper-Sissors</title>
+  </head>
+  <body>
+    <div class="main_div">
+      <div class="notHurray" id="notHurray">
+        <div class="score_div">
+          <div>
+            <h1 class="title">
+              Rock<br />Paper<br />
+              Scissors
+            </h1>
+          </div>
+          <div class="scores">
+            <div class="computer_score">
+              <h1 class="comp_score">Your <br />Score</h1>
+              <h3 class="zero" id="userScore">0</h3>
+            </div>
+            <div class="user_score">
+              <h1 class="comp_score">Computer <br />Score</h1>
+
+              <h3 class="zero" id="computerScore">0</h3>
+            </div>
+          </div>
+        </div>
+        <div class="forabsolute" style="display: flex">
+          <div class="buttons_div" id="buttonsDiv">
+            <div
+              class="first_two_btn"
+              style="display: flex; justify-content: space-between"
+            >
+              <button class="btn1" onclick="handleButtonClick('Rock')">
+                <img src="images/Rock.svg" alt="..." />
+              </button>
+              <button class="btn2" onclick="handleButtonClick('Scissors')">
+                <img src="images/Scissors.svg" alt="..." />
+              </button>
+            </div>
+            <div style="text-align: center; margin-top: 30%">
+              <button class="btn3" onclick="handleButtonClick('Paper')">
+                <img src="images/Paper.svg" alt="..." />
+              </button>
+            </div>
+          </div>
+          <div class="result_divs_div dontshow" id="resultsDiv">
+            <div class="user_wins dontshow" id="userWin">
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-evenly;
+                  align-items: center;
+                "
+              >
+                <div class="circle3">
+                  <div class="circle2">
+                    <div class="circle1">
+                      <div class="circle0">
+                        <h2 class="picked">YOUPICKED</h2>
+                        <button class="btn1">
+                          <img src="" alt="..." id="wonUserImg" />
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  style="
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                  "
+                >
+                  <h1 class="centered_text">YOU WON</h1>
+
+                  <h1 class="centered_text2">AGAINST PC</h1>
+                  <button onclick="playAgain()" class="playAgain">
+                    Play again
+                  </button>
+                </div>
+                <div class="notcircle1">
+                  <div class="notcircle0">
+                    <h2 class="picked">PC PICKED</h2>
+                    <button class="btn3">
+                      <img src="" alt="..." id="wonUserImg2" />
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="computer_wins dontshow" id="computerWin">
+              <div style="display: flex">
+                <div>
+                  <div class="notcircle1">
+                    <div class="notcircle0">
+                      <h2 class="picked">YOUPICKED</h2>
+                      <button class="btn3">
+                        <img src="" alt="..." id="lostUserImg" />
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  style="
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    text-align: center;
+                    align-items: center;
+                    gap: 10%;
+                  "
+                >
+                  <h1 class="centered_text">YOU LOST</h1>
+
+                  <h1 class="centered_text2">AGAINST PC</h1>
+                  <button
+                    onclick="playAgain()"
+                    class="playAgain"
+                    style="margin-left: 0px"
+                  >
+                    Play again
+                  </button>
+                </div>
+                <div>
+                  <div class="circle3">
+                    <div class="circle2">
+                      <div class="circle1">
+                        <div class="circle0">
+                          <h2 class="picked">PC PICKED</h2>
+                          <button class="btn2">
+                            <img alt="..." id="lostUserImg2" />
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="tie dontshow" id="tie">
+              <div style="display: flex">
+                <div>
+                  <h2 class="picked">YOUPICKED</h2>
+                  <button class="btn1">
+                    <img src="" alt="..." id="tieUserImg" />
+                  </button>
+                </div>
+                <div style="margin: 8% 8% 0 8%">
+                  <h1 class="centered_text">TIE</h1>
+
+                  <button onclick="playAgain()" class="playAgain2">
+                    Play again
+                  </button>
+                </div>
+                <div>
+                  <h2 class="picked">PC PICKED</h2>
+                  <button class="btn1">
+                    <img src="" alt="..." id="tieUserImg2" />
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="rules_div">
+            <div class="popup" id="gameRulesPopup">
+              <button class="x_btn" onclick="closePopup()">X</button>
+              <h1 class="game_rules">Game Rules</h1>
+              <ul>
+                <li>
+                  Rock beats scissors, scissors beat paper, and paper beats
+                  rock.
+                </li>
+                <li>
+                  Agree ahead of time whether you’ll count off “rock, paper,
+                  scissors, shoot” or just “rock, paper, scissors.”
+                </li>
+                <li>
+                  Use rock, paper, scissors to settle minor decisions or simply
+                  play to pass the time
+                </li>
+                <li>
+                  If both players lay down the same hand, each player lays down
+                  another hand
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <footer class="footer">
+          <div class="makeRight">
+            <button class="rulesbtn" onclick="openPopup()">Rules</button>
+            <button
+              class="rulesbtn nextbtn dontshow"
+              id="nextBtn"
+              onclick="hurray()"
+              style="margin-left: 10px !important"
+            >
+              Next
+            </button>
+          </div>
+        </footer>
+      </div>
+      <div class="hurray" id="hurray" style="display: none">
+        <div
+          style="display: flex; justify-content: center; align-items: center"
+        >
+          <div>
+            <div class="hurray_main">
+              <img src="images/worldcup.png" alt="..." class="worldcup" />
+            </div>
+            <div
+              style="
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+              "
+            >
+              <h1 class="hry">HURRAY!!</h1>
+              <br />
+              <h1 class="wewon">YOU WON THE GAME</h1>
+              <button
+                onclick="playAgain2()"
+                class="playAgain"
+                style="margin-left: 0px !important"
+              >
+                Play Again
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

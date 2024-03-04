@@ -1,0 +1,368 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@600&family=Poppins:wght@200;300;400;500;700&family=Public+Sans:wght@200;500&family=Roboto:ital,wght@1,100&display=swap");
+
+
+body{
+    background-color: #8CC461;
+    
+}
+.main_div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+
+}
+.score_div{
+    display: flex;
+    justify-content: space-between;
+    height: 138px;
+    width: 800px;
+    border: 2px solid white;
+    border-radius:13px ;
+    margin-top: 4%;
+}
+.title{
+    font-family: poppins;
+font-size: 40px;
+font-weight: 500;
+line-height: 47px;
+letter-spacing: 0.1em;
+text-align: left;
+color: white;
+margin-top: -1%;
+margin-left: 6%;
+
+}
+.scores{
+    display: flex;
+    gap: 5%;
+    justify-content: center;
+    align-items: center;
+    margin-right: 2%;
+}
+.computer_score,.user_score{
+    width: 139px;
+    height: 128px;
+    background-color: white;
+    border-radius: 9px;
+}
+.comp_score{
+    font-family: poppins;
+font-size: 17px;
+font-weight: 600;
+line-height: 20px;
+letter-spacing: 0.1em;
+text-align: center;
+color: rgb(134, 134, 134);
+
+}
+.zero{
+    font-family: poppins;
+font-size: 50px;
+font-weight: 500;
+line-height: 0px;
+letter-spacing: 0em;
+margin-bottom: 3%;
+text-align: center;
+
+}
+.buttons_div{
+    width: 330px;
+    margin-top: 8%;
+  
+}
+.btn1{
+    width: 110px;
+height: 110px;
+border-radius: 50%;
+border: 16px solid #0074B6;
+cursor: pointer;
+display: flex;
+justify-content: center;
+align-items: center;
+
+}
+.btn2{
+    width: 110px;
+height: 110px;
+border-radius: 50%;
+border: 16px solid #BD00FF;
+cursor: pointer;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+.btn3{
+    width: 110px;
+height: 110px;
+border-radius: 50%;
+border: 16px solid #FFA943;
+cursor: pointer;
+padding: 0 5px 0 0px;
+}
+.rulesbtn{
+    font-family: poppins;
+font-size: 21px;
+font-weight: 500;
+line-height: 23px;
+letter-spacing: 0.1em;
+text-align: right;
+border:1px solid white;
+color: white;
+background-color: #8CC461;
+border-radius: 4px;
+cursor: pointer;
+margin-top: 9%;
+margin-left: 96%;
+}
+.popup{
+    display: none;
+    background-color: #004429;
+    color: white;
+    Width:278px;
+    Height:325px;
+    border: 6px solid white;
+    border-radius: 12px;
+
+}
+.popup2{
+    display: none;
+    background-color: #004429;
+    color: white;
+    Width:278px;
+    Height:325px;
+    border: 6px solid white;
+    border-radius: 12px;
+
+}
+.rules_div {
+    position: absolute;
+    top: 10%;
+    
+    left: 100%;/* Adjusted from 'right: 0' to 'left: 0' */
+}
+
+.forabsolute {
+    position: relative;
+    display: flex;
+    justify-content: space-around; /* Centering the buttons */
+}
+.game_rules{
+    font-family: poppins;
+font-size: 29px;
+font-weight: 500;
+line-height: 34px;
+letter-spacing: 0em;
+text-align: center;
+
+}
+ul li{
+    font-family: poppins;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 15px;
+    letter-spacing: 0em;
+    text-align: left;
+    margin-top: 2%;
+      
+}
+.popup.show {
+    display: block;
+}
+.popup2.show {
+    display: block;
+}
+li{
+    padding-top: 2%;
+}
+.x_btn{
+    border: 4px solid white;
+    background-color: red;
+    color: white;
+    font-size: 24px;
+    width: 50px;
+    height: 50px;
+    border-radius:50% ;
+    text-align: center;
+    margin-left: 90%;
+    cursor: pointer;
+    margin-bottom: -10px;
+}
+#buttonsDiv.dontShow{
+    display: none !important;
+}
+#buttonsDiv.show{
+    display: block;
+}
+.footer{
+    display: flex;
+    justify-content: end;
+    width: 100ch;
+}
+.makeRight{
+    display: flex;
+    margin-top: 5%;
+}
+.result_divs_div{
+    height: 250px;
+    padding-top: 17%;
+    
+}
+#resultsDiv.dontshow{
+    display: none;
+}
+#userWin.dontshow{
+    display: none;
+}
+#computerWin.dontshow{
+    display: none;
+}
+#tie.dontshow{
+    display: none;
+}
+.nextbtn.dontshow{
+    display: none;
+}
+.dontshow {
+    display: none;
+  }
+  .hurray_main{
+    background: url("./images/stars.svg");
+    background-size: auto;
+    width: 510px;
+    height: 297px;
+    margin-top: 86px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .worldcup{
+    margin-top: 15%;
+width: 200.43px;
+height: 201px;
+  }
+  .hry{
+    font-family: poppins;
+    color: white;
+font-size: 91px;
+font-weight: 600;
+line-height: 20px;
+letter-spacing: 0.1em;
+text-align: left;
+
+  }
+  .wewon{
+    font-family: poppins;
+    color: white;
+font-size: 41px;
+font-weight: 600;
+line-height: 20px;
+letter-spacing: 0.1em;
+text-align: left;
+  }
+  .playAgain{
+    Width:174px;
+Height:44px;
+border-radius: 9px;
+background-color: white;
+color: grey;
+border: none;
+cursor: pointer;
+margin-left: 10%;
+  }
+  .playAgain2{
+    Width:174px;
+    Height:44px;
+    border-radius: 9px;
+    background-color: white;
+    color: grey;
+    border: none;
+    cursor: pointer;
+    margin-right: 1%;
+  }
+  .centered_text{
+    font-family: poppins;
+font-size: 39px;
+font-weight: 800;
+line-height: 0px;
+letter-spacing: 0.1em;
+text-align: center;
+color: white;
+
+  }
+  .centered_text2{
+    font-family: poppins;
+font-size: 25px;
+font-weight: 800;
+line-height: 0px;
+letter-spacing: 0.1em;
+text-align: center;
+color: white;
+
+  }
+.picked{
+    font-family: poppins;
+font-size: 17px;
+font-weight: 600;
+line-height: 20px;
+letter-spacing: 0.1em;
+text-align: left;
+color: white;
+
+}
+.circle3{
+    border: none;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color:#44861133;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.circle2{
+    border: none;
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    background-color:#4486115d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.circle1{
+    border: none;
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    background-color: #44861185;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.circle0{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 36%;
+}
+.notcircle1{
+    border: none;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color:#8eba6d33;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.notcircle0{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 25%;
+}
